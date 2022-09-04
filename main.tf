@@ -14,6 +14,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "web_server" {
+  count         = 20
   ami           = "ami-06640050dc3f556bb"
   instance_type = "t2.micro"
   key_name      = "Rhel"
